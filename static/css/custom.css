@@ -1,0 +1,13 @@
+body{
+    background-color: #13F50E;
+}
+.menu-button-home{
+    color: #FFF;
+    background-color: #075805;
+    border-color: transparent;
+    border-radius: 21px;
+    margin-left: 27px;
+}
+.icon{
+    color: #000;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% block head %}
+
+            <title>{% block title %}{{ dic.SITENAME }}{% endblock title %}</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+            <!-- Bootstrap CSS -->
+            <!-- <link rel="stylesheet" href="static/css/bootstrap.min.css"> -->
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+            <!-- JQuery -->
+            <!-- <script src="static/js/jquery-3.4.1.slim.min.js"></script> -->
+            <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.4.1.slim.min.js') }}"></script>
+
+            <!-- Popper -->
+            <!-- <script src="static/js/popper.min.js"></script> -->
+            <script type="text/javascript" src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+
+            <!-- Bootstrap JS -->
+            <!-- <script src="static/js/bootstrap.min.js"></script> -->
+            <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+            <!-- Font Awesome -->
+            <script src="https://kit.fontawesome.com/0a364817bf.js"></script>
+
+            <!-- Custom CSS -->
+            <!-- <link rel="stylesheet" type="text/css" href="static/css/custom.css"> -->
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/custom.css') }}">
+
+            <!-- Favicon -->
+            <link rel="shotcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+
+        {% endblock head %}
+    </head>
+    <body>
+        <header>
+            <!-- Menu options -->
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="#">SnakeWiki
+                        <img src="{{ url_for('static', filename='img/favicon.ico')}}" alt="">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuItems" aria-controls="menuItems" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="menuItems">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <!-- <a class="nav-link" href="#">Home</a> -->
+                                <a href="{{ url_for('home_load') }}">
+                                    <button type="button" class="menu-button-home">Home</button>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <!-- <a class="nav-link" href="#">Species</a> -->
+                                <a href="{{ url_for('species_load') }}">
+                                    <button type="button" class="menu-button-home">Species</button>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <!-- <a class="nav-link" href="#">News</a> -->
+                                <a href="{{ url_for('news_load') }}">
+                                    <button type="button" class="menu-button-home">News</button>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <!-- <a class="nav-link" href="#">About</a> -->
+                                <a href="{{ url_for('about_load') }}">
+                                    <button type="button" class="menu-button-home">About</button>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main role="main">
+            {% block content %}
+            {% endblock %}
+            <footer>
+                <div class="container" style="margin-top:50px;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-3">
+                                <em>Anderson Vieira's Template</em>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="{{ dic.INSTAGRAM_URL }}" target="_blank">
+                                    <i class="fab fa-instagram icon"></i>
+                                </a>
+                                <a href="{{ dic.TWITTER_URL }}" target="_blank">
+                                    <i class="fab fa-twitter icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </body>
+</html>
