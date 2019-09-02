@@ -1,5 +1,21 @@
-body{
-    background-color: #13F50E;
+body, html {
+    height: 100%;
+}
+.aboutbg{
+    background: linear-gradient(180deg, #9AA29A 74.22%, rgba(154, 162, 154, 0.42) 100%) no-repeat center center fixed;
+    background-size: cover;
+}
+.homebg{
+    background: linear-gradient(180deg, #13F50E 74.22%, rgba(19, 245, 14, 0.42) 100%) no-repeat center center fixed;
+    background-size: cover;
+}
+.newsbg{
+    background: linear-gradient(180deg, #F24444 74.22%, rgba(242, 68, 68, 0.42) 100%) no-repeat center center fixed;
+    background-size: cover;
+}
+.speciesbg{
+    background: linear-gradient(180deg, #E08C28 74.22%, rgba(224, 140, 40, 0.42) 100%) no-repeat center center fixed;
+    background-size: cover;
 }
 .menu-button-home{
     color: #FFF;
@@ -10,4 +26,7 @@ body{
 }
 .icon{
     color: #000;
+}
+.up-menu{
+    margin-top:50px;
 }

@@ -6,4 +6,6 @@ SITENAME = 'SnakeWiki'
 INSTAGRAM_URL = 'https://www.instagram.com/?hl=pt-br'
 TWITTER_URL = 'https://twitter.com/login?lang=pt'
 
+BODYCLASS = ''
+
 # To be implemented

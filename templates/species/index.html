@@ -1,16 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container" style="margin-top: 50px;">
+<div class="container up-menu">
     <div class="row">
         <!-- <div class="col-md-12"> -->
-            <div class="col-md-4">
-                <img src="{{ url_for('static', filename='img/african_python.png') }}" alt="">
+            <div class="col-md-4 specie-content">
+                <img src="{{ url_for('static', filename='img/african_python.png') }}" class="image" alt="">
+                <div class="middle">
+                    <div class="hover-text">African Rock Python</div>
+                </div>
             </div>
-            <div class="col-md-4">
-                <img src="{{ url_for('static', filename='img/gree_tree_python.png') }}" alt="">
+            <div class="col-md-4 specie-content">
+                <img src="{{ url_for('static', filename='img/gree_tree_python.png') }}" class="image" alt="">
+                <div class="middle">
+                    <div class="hover-text">Green Tree Python</div>
+                </div>
             </div>
-            <div class="col-md-4">
-                <img src="{{ url_for('static', filename='img/black_mamba.png') }}" alt="">
+            <div class="col-md-4 specie-content">
+                <img src="{{ url_for('static', filename='img/black_mamba.png') }}" class="image" alt="">
+                <div class="middle">
+                    <div class="hover-text">Black Mamba</div>
+                </div>
             </div>
         <!-- </div> -->
     </div>  

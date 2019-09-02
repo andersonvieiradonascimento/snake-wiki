@@ -29,13 +29,14 @@
             <!-- Custom CSS -->
             <!-- <link rel="stylesheet" type="text/css" href="static/css/custom.css"> -->
             <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/custom.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/imghover.css') }}">
 
             <!-- Favicon -->
             <link rel="shotcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
 
         {% endblock head %}
     </head>
-    <body>
+    <body class="{{ dic.BODYCLASS }}">
         <header>
             <!-- Menu options -->
             <div class="container">
