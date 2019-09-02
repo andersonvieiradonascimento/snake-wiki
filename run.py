@@ -1,6 +1,8 @@
 import os
 from flask import Flask, render_template
 import config
+import newsconverter as nc
+import re
 
 """
 Flask server to run the application: test purposes
@@ -11,7 +13,7 @@ app = Flask(__name__)
 @app.route("/")
 def home_load():
     dic['BODYCLASS'] = 'homebg'
-    print(dic)
+    # print(dic)
     return render_template('home/index.html', dic=dic)
 
 @app.route("/species")
@@ -22,6 +24,8 @@ def species_load():
 @app.route("/news")
 def news_load():
     dic['BODYCLASS'] = 'newsbg'
+    dic['NEWS'] = nc.convert_to_html()
+    # print(dic)
     return render_template('news/index.html', dic=dic)
 
 @app.route("/about")

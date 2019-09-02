@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>
-    <p>This is the news page</p>
-</h1>
+<div class="container up-menu" id="news-block">
+    {% for item in dic.NEWS %}
+        <div class="row">
+            <div class="col-md-12">
+                {{ item|safe }}
+            </div>
+        </div>
+    {% endfor %}
+</div>
 {% endblock %}
