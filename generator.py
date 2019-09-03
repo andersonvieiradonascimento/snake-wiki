@@ -6,6 +6,7 @@ import config
 import shutil
 import logging
 
+# temporary script
 def generate_main_pages():
     for page in os.listdir('template/home'):
         env = Environment(loader=PackageLoader('generator', f'template/'))
