@@ -25,7 +25,6 @@ def species_load():
 def news_load():
     dic['BODYCLASS'] = 'newsbg'
     dic['NEWS'] = nc.convert_to_html()
-    # print(dic)
     return render_template('news/index.html', dic=dic)
 
 @app.route("/about")
